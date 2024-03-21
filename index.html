@@ -14,14 +14,14 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-rastercoords"></script>
     <script>
-        var map = L.map('map').setView([0, 0], 2);
+        var map = L.map('map').setView([37.913707, -123.003801], 11);
         L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
             maxZoom: 20,
             subdomains:['mt0','mt1','mt2','mt3']
         }).addTo(map);
 
         var imageUrl = 'https://raw.githubusercontent.com/WilliamSpeiser/Ch3_Results/main/All_Ea/spearmanr_Ea_band_10.tif',
-            imageBounds = [[-90, -180], [90, 180]];
+            imageBounds = [[37.882708, -123.118667], [37.944706, -122.888936]];
         var overlay = L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
         // Add click event for raster
@@ -32,3 +32,4 @@
     </script>
 </body>
 </html>
+
